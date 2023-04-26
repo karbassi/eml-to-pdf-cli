@@ -1,0 +1,16 @@
+# Ignore TypeScript source files and the tsconfig.json file
+*.ts
+tsconfig.json
+
+# Ignore development files
+.git
+.gitignore
+.editorconfig
+.eslint*
+prettier*
+README.md
+test
+
+# Ignore other files and directories
+node_modules
+dist/*.map

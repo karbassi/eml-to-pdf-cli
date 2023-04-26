@@ -1,0 +1,26 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset and trim trailing whitespace for all files
+[*]
+charset = utf-8
+trim_trailing_whitespace = true
+
+# JavaScript files
+[*.js]
+indent_style = space
+indent_size = 2
+
+# TypeScript files
+[*.ts]
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false

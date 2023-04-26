@@ -1,0 +1,9 @@
+# Ignore node_modules directory
+node_modules
+
+# Ignore compiled JavaScript files
+dist
+
+# Ignore any files or directories that should not be committed to version control
+*.log
+.DS_Store

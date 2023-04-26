@@ -1,0 +1,31 @@
+{
+  "name": "eml-to-pdf-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool for converting EML files to PDF format",
+  "bin": {
+    "eml-to-pdf": "./bin/eml-to-pdf.js"
+  },
+  "keywords": [
+    "eml",
+    "pdf",
+    "converter",
+    "cli"
+  ],
+  "author": "Ali Karbassi <ali@karbassi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eml-parser": "^2.1.0",
+    "commander": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "eslint": "^8.1.0",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "eslint src/**/*.{js,ts}",
+    "prepublishOnly": "npm run build && npm run lint"
+  }
+}
