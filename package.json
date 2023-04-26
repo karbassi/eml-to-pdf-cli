@@ -23,8 +23,8 @@
     "CODE_OF_CONDUCT.md"
   ],
   "dependencies": {
-    "eml-parser": "^2.1.0",
-    "commander": "^8.0.0"
+    "commander": "^8.0.0",
+    "eml-parser": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
