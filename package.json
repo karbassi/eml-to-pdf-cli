@@ -13,6 +13,15 @@
   ],
   "author": "Ali Karbassi <ali@karbassi.com>",
   "license": "MIT",
+  "main": "./dist/eml-to-pdf.js",
+  "types": "./dist/eml-to-pdf.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CODE_OF_CONDUCT.md"
+  ],
   "dependencies": {
     "eml-parser": "^2.1.0",
     "commander": "^8.0.0"
@@ -23,7 +32,7 @@
     "typescript": "^4.5.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "lint": "eslint src/**/*.{js,ts}",
     "prepublishOnly": "npm run build && npm run lint"
