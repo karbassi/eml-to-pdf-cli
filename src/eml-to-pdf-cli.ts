@@ -24,9 +24,9 @@ const pdfFilePath = `${emlFilePath}.pdf`
 
 new EmlParser(emlFile)
   .convertEmailToStream('pdf')
-  .then((stream) => {
+  .then((stream: fs.ReadStream) => {
     stream.pipe(fs.createWriteStream(pdfFilePath))
   })
-  .catch((err) => {
+  .catch((err: Error) => {
     console.error(err)
   })
