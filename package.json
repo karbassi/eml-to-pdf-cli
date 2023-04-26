@@ -5,6 +5,7 @@
   "bin": {
     "eml-to-pdf": "./bin/eml-to-pdf.js"
   },
+  "type": "module",
   "keywords": [
     "eml",
     "pdf",
@@ -13,8 +14,8 @@
   ],
   "author": "Ali Karbassi <ali@karbassi.com>",
   "license": "MIT",
-  "main": "./dist/eml-to-pdf.js",
-  "types": "./dist/eml-to-pdf.d.ts",
+  "main": "./dist/src/eml-to-pdf-cli.js",
+  "types": "./dist/src/eml-to-pdf-cli.d.ts",
   "files": [
     "bin",
     "dist",
@@ -28,13 +29,24 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
+    "ava": "^5.2.0",
     "eslint": "^8.1.0",
-    "typescript": "^4.5.4"
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   },
   "scripts": {
-    "test": "jest",
+    "test": "ava 'test/**/*.test.ts'",
     "build": "tsc",
     "lint": "eslint src/**/*.{js,ts}",
     "prepublishOnly": "npm run build && npm run lint"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ]
   }
 }
